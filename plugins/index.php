@@ -1,2 +1,2 @@
 <?php
-// Silence is golden. I've come from a junction called Github. 
+// Silence is golden. I've come from a junction called Github. Amen. 
