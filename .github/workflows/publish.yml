@@ -3,15 +3,20 @@ name: Generate a build and push to another branch
 on:
   push:
     branches:
-      - main # The branch name your are commit the new changes
+      - main # The branch name you are committing the new changes
 
 jobs:
   build:
     runs-on: ubuntu-latest
     name: Build and Push
     steps:
-      - name: git-checkout
+      - name: Checkout code
         uses: actions/checkout@v3
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '20' # Specify the Node.js version
 
       - name: Install all dependencies
         run: npm install
